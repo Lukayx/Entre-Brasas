@@ -1,0 +1,81 @@
+.page{
+  min-height: 100vh;
+  width: 100%;
+  background-color: red;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 50px;
+  background-color: #1d1d1d;
+}
+
+.nav ul{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  color: white;
+}
+
+.header{
+  width: 100%;
+  height: 600px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.headerImage{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.header::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.header h1{
+  position: relative;
+  z-index: 2; /* Asegúrate de que el texto esté por encima del pseudo-elemento */
+  color: #F2A326;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.header h2{
+  position: relative;
+  z-index: 2; /* Asegúrate de que el texto esté por encima del pseudo-elemento */
+  color: rgba(219, 219, 219, 0.849);
+  font-size: 2rem;
+}
+
+.header button{
+  position: relative;
+  z-index: 2; /* Asegúrate de que el texto esté por encima del pseudo-elemento */
+  background-color: #F2A326;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 10px;
+}
