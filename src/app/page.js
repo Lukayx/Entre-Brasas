@@ -34,7 +34,26 @@ export default function Home() {
           <h2>Restaurante</h2>
           <button>Quienes somos</button>
         </header>
-        <section className={styles.sectionUs}></section>
+        <section className={styles.sectionUs}>
+          <header>
+            <div>
+              <h1>Quienes somos</h1>
+              <p>
+                Somos un restaurante de comida chilena con una amplia variedad de
+                platos y vinos. Nos caracterizamos por nuestra atención y calidad en
+                los productos que ofrecemos.
+            </p>
+            </div>
+            <Image
+              src="/UsHeader.webp"
+              className={styles.usImage}
+              width={1920} // Proporción base
+              height={500} // Proporción base
+              alt="Quienes somos"
+              priority
+            />
+          </header>
+        </section>
         <section className={styles.sectionMainDishes}></section>
         <section className={styles.sectionWines}></section>
         <section className={styles.sectionContact}></section>
