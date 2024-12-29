@@ -1,38 +1,8 @@
 .page{
-  min-height: 100vh;
-  width: 100%;
+  min-height: 100%;
+  min-width: 100% ;
+  padding-left: 210px;
   /* background-color: red; */
-}
-
-.nav{
-  display: flex;
-  flex-direction: column;
-  background-color: #1d1d1d;
-  overflow: hidden;
-  width: 70px;
-  color: #f6f6f6;
-}
-
-.nav ul{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  list-style: none;
-  color: #f6f6f6;
-}
-
-.nav ul li{
-  padding: 10px 16px;
-}
-
-.nav ul li:hover{
-  background-color: #2d2d2d;
-  cursor: pointer;
-}
-
-.menuIcon{
-  width: 38px;
-  height: 38px;
 }
 
 .header{
@@ -47,8 +17,7 @@
 
 .headerImage{
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
   position: absolute; 
   top: 0;
   left: 0;
@@ -68,54 +37,88 @@
 
 .header h1{
   position: relative;
-  z-index: 2; /* Asegúrate de que el texto esté por encima del pseudo-elemento */
+  z-index: 2; 
   color: #F2A326;
-  font-size: 3rem;
+  font-size: 4.5rem;
   text-align: center;
+}
+
+.header .headerTitle{
+  position: relative;
+  z-index: 2; 
+  max-width: 600px;
+  height: auto;
 }
 
 .header h2{
   position: relative;
-  z-index: 2; /* Asegúrate de que el texto esté por encima del pseudo-elemento */
-  color: #f6f6f6;
-  font-size: 2rem;
-  opacity: .8;
+  z-index: 2; 
+  color: #f6f6f6d7;
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.header h2::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -110px;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 2px;
+  background-color: #f6f6f6d7;
+  z-index: -1;
+}
+
+.header h2::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -110px;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 2px;
+  background-color: #f6f6f6d7;
+  z-index: -1;
 }
 
 .header a{
   position: relative;
-  z-index: 2; /* Asegúrate de que el texto esté por encima del pseudo-elemento */
-  background-color: #F2A326;
-  color: #f6f6f6;
+  z-index: 2; 
+  background-color: #e7e7e7;
+  color: #333333;
   border: none;
-  padding: 10px 20px;
-  font-size: 1.2rem;
+  padding: 10px 30px;
+  font-size: .9rem;
   cursor: pointer;
-  margin-top: 20px;
-  border-radius: 10px;
+  margin-top: 40px;
+  /* border-radius: 10px; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: all 0.2s;
+  text-transform: uppercase;
 }
 
-.header button:hover{
+.header a:hover{
   transform: scale(1.1);
 }
 
-.header button:active{
+.header a:active{
   background-color: #c48827;
 }
 
-.sectionUs{
+.page section{
   width: 100%;
-  height: fit-content;
+  height: 700px;
   background-color: #212121;
-
   background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23141414' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");  position: relative;
 }
 
 .sectionUs header{
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   padding: 0 40px;
 }
@@ -127,7 +130,7 @@
 
 .sectionUs .usImage{
   object-fit: cover;
-  width: 80%;
+  width: 70%;
   padding: 40px;
 }
 
@@ -135,7 +138,8 @@
   color: rgb(226, 226, 226);
   font-size: 3rem;
   text-align: center;
-  padding-top: 3rem;
+  font-weight: 400;
+  padding-top: 1.5rem;
 }
 
 .sectionUs p{
@@ -143,7 +147,8 @@
   opacity: .7;
   font-size: 1.5rem;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 1.5rem;
+  /* max-width: 600px; */
 }
 
 .footer{
@@ -157,4 +162,31 @@
   align-items: center;
   flex-direction: column;
   color: #f6f6f6;
+}
+
+
+@media (max-width: 768px) {
+  .page {
+    padding-left: 0;
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header h2::before{
+    left: -60px;
+    width: 40px;
+  }
+  
+  .header h2::after{
+    right: -60px;
+    width:40px;
+
+  }
+}
+
+@media (max-width: 720px) {
+  .header h2{
+    font-size: 1.6rem;
+  }
 }
