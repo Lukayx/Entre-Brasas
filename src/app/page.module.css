@@ -1,7 +1,7 @@
 .page{
   min-height: 100%;
   min-width: 100% ;
-  padding-left: 210px;
+  padding-left: 88px;
   /* background-color: red; */
 }
 
@@ -48,13 +48,16 @@
   z-index: 2; 
   max-width: 600px;
   height: auto;
+  filter: drop-shadow(2px 4px 6px black);
 }
+
 
 .header h2{
   position: relative;
   z-index: 2; 
   color: #f6f6f6d7;
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 5vw, 1.8rem);
+  /* font-size: 1.8rem; */
   font-weight: 300;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -87,9 +90,8 @@
 .header a{
   position: relative;
   z-index: 2; 
-  background-color: #e7e7e7;
-  color: #333333;
-  border: none;
+  color: #e7e7e7;
+  border: 2px solid #e7e7e7;
   padding: 10px 30px;
   font-size: .9rem;
   cursor: pointer;
@@ -172,21 +174,17 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 560px) {
+  .header .headerTitle{
+    width: 94%;
+  }
   .header h2::before{
     left: -60px;
     width: 40px;
   }
-  
   .header h2::after{
     right: -60px;
     width:40px;
-
   }
 }
 
-@media (max-width: 720px) {
-  .header h2{
-    font-size: 1.6rem;
-  }
-}

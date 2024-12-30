@@ -1,30 +1,44 @@
 .nav{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: #1d1d1d;
   overflow: hidden;
-  width: 210px;
+  width: 88px;
   color: #f6f6f6;
   position: fixed;
   z-index: 3;
-  height: 100vh; 
+  height: 100vh;
+  /* padding: 1.2rem .6rem; */
 }
 
 .nav ul{
   display: flex;
   flex-direction: column;
-  /* gap: 2rem; */
+  /* gap: .5rem; */
   list-style: none;
   color: #f6f6f6;
 }
 
 
 .nav ul li{
-  padding: .8rem 1.3rem;
+  padding: .8rem 0rem;
   width: 100%;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  grid-template-columns: 50px 1fr;
+  border-radius: 5px;
+  flex: 1;
+  transition: .2s all;
+}
+
+.nav .navLinks li:first-child .iconNav{
+  width: 30px;
+  height: 30px;
+}
+
+.nav .navLinks li:first-child span{
+  display: none;
 }
 
 .nav ul li:hover{
@@ -32,9 +46,37 @@
   cursor: pointer;
 }
 
+.nav ul li:active{
+  color: #d4953d;
+}
+
+.nav ul li span{
+  font-size: .8rem;
+  text-align: center;
+  margin-top: 5px;
+  line-height: 1;
+  display: block;
+}
+
+.schedule{
+  text-align: center;
+  font-size: .9rem;
+}
+
 .iconNav{
-  width: 30px;
-  height: 30px;
+  justify-self: center;
+  width: 20px;
+  height: 20px;
+}
+
+.nav .socialMedia .iconNav{
+  width: 24px;
+  height: 24px;
+  border-radius: 20px;
+  padding: 5px;
+  /* color: rgb(34, 89, 208); */
+  color: #1d1d1d;
+  background-color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -45,6 +87,7 @@
     flex-direction: row;
     width: 100%;
     height: 70px;
+    padding: 0 0;
   }
 
   .nav ul{
@@ -53,25 +96,53 @@
     justify-content: space-between;
     color: #f6f6f6;
     border-top: #f6f6f6;
+    gap: 0;
+  }
+
+  .nav .navLinks li:first-child{
+  overflow: visible;
+}
+
+  .nav .socialMedia,
+  .nav .schedule{
+    display: none;
+  }
+
+  .nav ul li:not(:last-child){
+    border-left: #6e6e6e solid 1px;    
+  }
+
+  .nav .navLinks li:first-child span{
+    display: block;
+  }
+  .nav .navLinks li:first-child .iconNav{
+    width: 20px;
+    height: 20px;
+  }
+  .nav .navHide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .nav ul li{
-    padding: 20px auto;
-    flex: 1;
-  }
-
-  .nav ul li:first-child div,
-  .linkNav{
+    border-radius: 0;
     padding: 0 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-top: #6e6e6e solid 1px;
   }
+
+  .nav .iconNav{
+    padding-top: 20px;
+  }
+
   .nav li span{
     text-align: center;
     font-weight: 700;
-    font-size: 7px;
+    font-size: 7px !important;
     line-height: 1;
     letter-spacing: .04em;
     margin-top: 5px;
