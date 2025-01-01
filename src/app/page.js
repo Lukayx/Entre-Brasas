@@ -11,32 +11,36 @@ export default function Home() {
           <Image
             src="/header.webp"
             className={styles.headerImage}
-            width={1920} // Proporción base
-            height={600} // Proporción base
+            fill
             alt="Header image"
             priority
           />
-          {/* <h1>Entre Brasas</h1> */}
           <Image
             src="/headerTitle.png"
             className={styles.headerTitle}
-            width={800} // Proporción base
-            height={250} // Proporción base
+            width={600} // Proporción base
+            height={150} // Proporción base
             alt="Header title"
-            priority
           />
-          <h2>Restaurante</h2>
+          <h2>Restaurant</h2>
           <a href="#us">Quienes somos</a>
         </header>
         <section className={styles.sectionUs} id="us">
-          <header>
             <div>
+              <h6>Disfrutemos juntos</h6>
               <h1>Quienes somos</h1>
               <p>
                 Somos un restaurante de comida chilena con una amplia variedad
                 de platos y vinos. Nos caracterizamos por nuestra atención y
+                calidad en los productos que ofrecemos. Somos un restaurante de comida chilena con una amplia variedad
+                de platos y vinos. Nos caracterizamos por nuestra atención y
                 calidad en los productos que ofrecemos.
               </p>
+              {/* <p>
+                Somos un restaurante de comida chilena con una amplia variedad
+                de platos y vinos. Nos caracterizamos por nuestra atención y
+                calidad en los productos que ofrecemos.
+              </p> */}
             </div>
             <Image
               src="/UsHeader.webp"
@@ -44,9 +48,14 @@ export default function Home() {
               width={1920} // Proporción base
               height={500} // Proporción base
               alt="Quienes somos"
-              priority
             />
-          </header>
+            <Image
+              src="/UsHeader.webp"
+              className={styles.usImagee}
+              width={1920} // Proporción base
+              height={500} // Proporción base
+              alt="Quienes somos"
+            />
         </section>
         <section
           className={styles.sectionMainDishes}

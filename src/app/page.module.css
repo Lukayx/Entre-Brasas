@@ -16,8 +16,8 @@
 }
 
 .headerImage{
-  object-fit: cover;
   max-width: 100%;
+  object-fit: cover;
   position: absolute; 
   top: 0;
   left: 0;
@@ -112,45 +112,76 @@
 
 .page section{
   width: 100%;
-  height: 700px;
-  background-color: #212121;
-  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23141414' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");  position: relative;
+  min-height: 600px;
 }
 
-.sectionUs header{
+.page section h6{
+  /* text-transform: uppercase; */
+  letter-spacing: 2px;
+  font-weight: 400;
+  position: relative;
+  z-index: 2;
+  color: #bea052;
+  font-family: 'Tangerine';
+  font-size: 32px;
+}
+
+.page .sectionUs{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 300px);
+  grid-template-areas: 
+  "info info"
+  "img1 img2";
+  gap: 2rem;
+  padding: 2rem;
+  min-height: 400px;
+}
+
+.page .sectionUs div{
+  grid-area: info;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
+  background: #444444c4;
   padding: 0 40px;
+  /* align-items: center; */
+  /* background-color: blue; */
+  /* text-align: center; */
+
 }
 
-.sectionUs header div{
-  display: flex;
-  flex-direction: column;
+.sectionUs .usImage,
+.sectionUs .usImagee{
+  object-fit: cover; /* Ajusta las imágenes al espacio */
+  width: 100%;
+  height: 100%;
 }
 
 .sectionUs .usImage{
-  object-fit: cover;
-  width: 70%;
-  padding: 40px;
+  grid-area: img1;
+}
+
+.sectionUs .usImagee{
+  grid-area: img2;
 }
 
 .sectionUs h1{
   color: rgb(226, 226, 226);
-  font-size: 3rem;
-  text-align: center;
+  font-size: 38px;
   font-weight: 400;
-  padding-top: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .sectionUs p{
   color: #f6f6f6;
-  opacity: .7;
-  font-size: 1.5rem;
+  opacity: .8;
+  font-size: 16px;
+  padding-top: 10px;
   text-align: center;
-  padding-top: 1.5rem;
-  /* max-width: 600px; */
+  max-width: 800px;
 }
 
 .footer{
