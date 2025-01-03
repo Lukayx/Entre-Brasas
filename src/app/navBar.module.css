@@ -4,12 +4,13 @@
   justify-content: space-between;
   background-color: #1d1d1d;
   overflow: hidden;
-  width: 88px;
+  width: 200px;
   color: #f6f6f6;
   position: fixed;
   z-index: 3;
   height: 100vh;
-  /* padding: 1.2rem .6rem; */
+  transition: 0.4s ease;
+  padding: 10px 0;
 }
 
 .nav ul{
@@ -18,27 +19,39 @@
   /* gap: .5rem; */
   list-style: none;
   color: #f6f6f6;
+  padding: 0 15px;
+  gap: 4px;
 }
 
+.collapsed{
+  width: 88px;
+}
+
+.collapsed ul li span{
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.collapsed .schedule{
+  /* opacity: 0; */
+  transition: opacity 0.2s ease;
+}
 
 .nav ul li{
-  padding: .8rem 0rem;
+  padding: 16px 16px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 24px 1fr;
   align-items: center;
   border-radius: 5px;
-  flex: 1;
   transition: .2s all;
+  gap: 12px;
 }
 
 .nav .navLinks li:first-child .iconNav{
   width: 30px;
   height: 30px;
-}
-
-.nav .navLinks li:first-child span{
-  display: none;
 }
 
 .nav ul li:hover{
@@ -50,23 +63,32 @@
   color: #d4953d;
 }
 
-.nav ul li span{
+.nav .navLinks li span{
   font-size: .8rem;
-  text-align: center;
-  margin-top: 5px;
   line-height: 1;
-  display: block;
+  white-space: nowrap;
+  /* display: none; */
 }
 
 .schedule{
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   font-size: .9rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  /* opacity: 1; */
 }
 
-.iconNav{
+.schedule div{
+  text-align: center;
+}
+
+.navLinks .iconNav{
+  width: 24px;
+  height: 24px;
   justify-self: center;
-  width: 20px;
-  height: 20px;
 }
 
 .nav .socialMedia .iconNav{
@@ -77,6 +99,13 @@
   /* color: rgb(34, 89, 208); */
   color: #1d1d1d;
   background-color: #fff;
+  justify-self: center;
+}
+
+.socialMedia{
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 4px;
 }
 
 @media (max-width: 768px) {
