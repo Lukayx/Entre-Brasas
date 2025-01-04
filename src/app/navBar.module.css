@@ -117,6 +117,7 @@
     width: 100%;
     height: 70px;
     padding: 0 0;
+    overflow: visible;
   }
 
   .nav ul{
@@ -126,11 +127,8 @@
     color: #f6f6f6;
     border-top: #f6f6f6;
     gap: 0;
+    padding: 0;
   }
-
-  .nav .navLinks li:first-child{
-  overflow: visible;
-}
 
   .nav .socialMedia,
   .nav .schedule{
@@ -141,12 +139,9 @@
     border-left: #6e6e6e solid 1px;    
   }
 
-  .nav .navLinks li:first-child span{
-    display: block;
-  }
   .nav .navLinks li:first-child .iconNav{
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
   }
   .nav .navHide{
     display: flex;
@@ -162,6 +157,7 @@
     flex-direction: column;
     align-items: center;
     border-top: #6e6e6e solid 1px;
+    gap: 0;
   }
 
   .nav .iconNav{
@@ -176,5 +172,31 @@
     letter-spacing: .04em;
     margin-top: 5px;
     text-transform: uppercase;
+    opacity: 1 !important;
+    white-space: normal;
+    pointer-events: all;
+  }
+
+  .nav::before{
+    content: '';
+    position: absolute;
+    top: -90vh;
+    right: 0;
+    width: 100%;
+    height: 90vh;
+    background-color: #1d1d1d;
+    z-index: 1;
+    transition: 0.4s ease;
+  }
+
+  .collapsed::before{
+    content: '';
+    position: absolute;
+    top: -90vh;
+    right: 0;
+    width: 0;
+    height: 90vh;
+    background-color: #1d1d1d;
+    z-index: 1;
   }
 }
