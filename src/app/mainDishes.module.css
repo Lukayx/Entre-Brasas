@@ -65,6 +65,9 @@
 
 .sectionMainDishes .dishesTitle{
   margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .sectionMainDishes .dishesTitle ul{
@@ -72,11 +75,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  list-style: none;
-  border: #2f2f2f 2px solid;
-  padding: 6px 0;
-  width: 700px;
-  z-index: 0;
+  flex-wrap: wrap;
+  max-width: 700px;
+  width: calc(90%);
+  gap: 1px;
+  background-color: grey;
 }
 
 .sectionMainDishes .dishesTitle ul::before{
@@ -86,9 +89,22 @@
   left: 50%;
   transform: translate(-50%,-50%);
   width: 100%;
-  height: calc(100% - 12px);
+  height: 100%;
   border: #2f2f2f 2px solid;
   padding: 0 6px;
+  z-index: 0;
+}
+
+.sectionMainDishes .dishesTitle ul::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 100%;
+  width: calc(100%);
+  border: #2f2f2f 2px solid;
+  padding: 6px 0;
   z-index: 0;
 }
 
@@ -101,7 +117,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 20px;
   font-weight: 400;
   color: #c3c3c3;
   text-transform: uppercase;
@@ -110,6 +125,7 @@
   padding: 10px;
   font-size: 12px;
   background-color: #1e1e1e;
+  flex: 1 1 150px; /* Ajusta el ancho mínimo a 150px */
 }
 
 .sectionMainDishes .dishesTitle ul li span{
@@ -118,8 +134,9 @@
 
 .sectionMainDishes .dishesTitle ul li .icon {
   margin-right: 8px; /* Espacio entre el ícono y el texto */
-  font-size: 1.2rem; /* Tamaño del ícono */
   transition: all 0.2s;
+  max-height: 19.19px;
+  min-height: 19.19px;
   color: #c3c3c3;
 }
 
@@ -141,5 +158,98 @@
   color: #cb8a22 !important; /* Color al seleccionar */
 }
 
+.dishes{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.dishes .dishesImageDiv,
+.dishes .dishesTextDiv{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.sectionMainDishes section span{
+  padding: 20px;
+  font-size: .8rem;
+  background: #212121;
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23141414' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  color: #e1e1e1;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5) ;
+  border-top: 2px solid #c48827;
+  position: relative;
+}
+
+.sectionMainDishes .dishes span{
+  flex: 0 1 200px;
+}
+
+.sectionMainDishes section span::before{
+  content: '◆';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #c48827;
+}
+
+.img{
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  background-color: #ccc;
+  object-fit: cover;
+}
+
+.fittings{
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: 300px;
+  grid-template-areas:
+  "fitting1 txt1 fitting2";
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+}
 
 
+.fittings .img:first-child{
+  grid-area: fitting1;
+}
+
+.fittings span{
+  grid-area: txt1;
+  height: 100%;
+}
+
+.fittings .img:last-child{
+  grid-area: fitting2;
+}
+
+@media (max-width: 735px) {
+  .fittings{
+    grid-template-columns: repeat(2, minmax(min(250px, 100px), 1fr));
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "fitting1 fitting2"
+    "txt1 txt1";
+  }
+
+  .fittings span{
+    height: fit-content;
+  }
+
+  .fittings .img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2/3;
+    max-width: 240px;
+  }
+}

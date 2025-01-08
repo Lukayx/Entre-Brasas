@@ -1,14 +1,15 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import styles from "./mainDishes.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUtensils,
-  faDrumstickBite,
-  faWineGlass,
   faIceCream,
+  faCarrot,
 } from "@fortawesome/free-solid-svg-icons";
 
+// ...existing code...
 export default function MainDishes() {
   const [selectedOption, setSelectedOption] = useState(0);
 
@@ -26,31 +27,97 @@ export default function MainDishes() {
             onClick={() => setSelectedOption(0)}
           >
             <FontAwesomeIcon icon={faUtensils} className={styles.icon} />
-            <span>Platos Principales</span>
+            <span>Platos y Carnes</span>
           </li>
           <li
             className={selectedOption === 1 ? styles.selected : ""}
             onClick={() => setSelectedOption(1)}
           >
-            <FontAwesomeIcon icon={faDrumstickBite} className={styles.icon} />
-            <span>Carnes</span>
+            <FontAwesomeIcon icon={faCarrot} className={styles.icon} />
+            <span>Guarniciones</span>
           </li>
           <li
             className={selectedOption === 2 ? styles.selected : ""}
             onClick={() => setSelectedOption(2)}
-          >
-            <FontAwesomeIcon icon={faWineGlass} className={styles.icon} />
-            <span>Vinos</span>
-          </li>
-          <li
-            className={selectedOption === 3 ? styles.selected : ""}
-            onClick={() => setSelectedOption(3)}
           >
             <FontAwesomeIcon icon={faIceCream} className={styles.icon} />
             <span>Postres</span>
           </li>
         </ul>
       </div>
+
+      {/* Div para Platos y Carnes */}
+      {selectedOption === 0 && (
+        <section className={styles.dishes}>
+          <div className={styles.dishesImageDiv}>
+            <Image
+              src="/Platos/PP1.webp"
+              className={styles.img}
+              width={200}
+              height={300}
+              alt="Plato 1"
+            />
+            <Image
+              src="/Platos/PP2.webp"
+              className={styles.img}
+              width={200}
+              height={300}
+              alt="Plato 2"
+            />
+            <Image
+              src="/Platos/PP3.webp"
+              className={styles.img}
+              width={200}
+              height={300}
+              alt="Plato 3"
+            />
+          </div>
+          <div className={styles.dishesTextDiv}>
+            <span id={styles.span1}>
+              En nuestro restaurante ofrecemos una experiencia gastronómica única.
+            </span>
+            <span id={styles.span2}>
+              Especialidades en carnes a las brasas, pescados y platos
+              vegetarianos.
+            </span>
+            <span id={styles.span3}>
+              Honramos la cocina chilena con recetas tradicionales.
+            </span>
+          </div>
+        </section>
+      )}
+
+      {/* Div para Guarniciones */}
+      {selectedOption === 1 && (
+        <section className={styles.fittings}>
+          <Image
+            src="/Platos/Guarn1.webp"
+            className={styles.img}
+            width={200}
+            height={300}
+            alt="Plato 3"
+          />
+          <span>
+            Ofrecemos guarniciones únicas como variedades de risottos, cremoso
+            de choclo y espinaca, verduras salteadas y mas acompañamientos
+            perfectos para complementar cada plato.
+          </span>
+          <Image
+            src="/Platos/Guarn2.webp"
+            className={styles.img}
+            width={200}
+            height={300}
+            alt="Plato 3"
+          />
+        </section>
+      )}
+
+      {/* section para Postres */}
+      {selectedOption === 2 && (
+        <section className={styles.postres}>
+          <h2>Sección Postres</h2>
+        </section>
+      )}
     </section>
   );
 }

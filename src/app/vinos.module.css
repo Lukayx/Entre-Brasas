@@ -1,0 +1,64 @@
+.sectionWines{
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #212121;
+}
+
+.sectionWines .headerWines{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.sectionWines .headerWines h6{
+  /* text-transform: uppercase; */
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: #d4af37;
+  font-family: 'Tangerine';
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: -5px;
+}
+
+.sectionWines .headerWines h1{
+  color: #e8e8e8;
+  font-size: 38px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+}
+
+.sectionWines .headerWines span{
+  color: #c48827;
+  position: relative;
+}
+
+.sectionWines .headerWines span::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -70px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #c48827;
+}
+
+.sectionWines .headerWines span::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #c48827;
+}

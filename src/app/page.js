@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import NavBar from "./navBar";
 import MainDishes from "./mainDishes";
+import Vinos from "./vinos";
 
 export default function Home() {
   return (
@@ -11,20 +12,29 @@ export default function Home() {
         <header className={styles.header}>
           <Image
             src="/header.webp"
-            className={styles.headerImage}
+            className={styles.headerImagePC}
             fill
             alt="Header image"
             priority
           />
           <Image
-            src="/headerTitle.png"
-            className={styles.headerTitle}
-            width={600} // Proporción base
-            height={150} // Proporción base
-            alt="Header title"
+            src="/header.jpg"
+            className={styles.headerImageMovile}
+            fill
+            alt="Header image"
+            priority
           />
-          <h2>Restaurant</h2>
-          <a href="#us">Quienes somos</a>
+          <div className={styles.headerContent}>
+            <Image
+              src="/headerTitle.png"
+              className={styles.headerTitle}
+              width={600} // Proporción base
+              height={150} // Proporción base
+              alt="Header title"
+            />
+            <h2>Restaurant</h2>
+            <a href="#us">Quienes somos</a>
+          </div>
         </header>
         <section className={styles.sectionUs} id="us">
           <header className={styles.headerUs}>
@@ -62,7 +72,7 @@ export default function Home() {
           /> */}
         </section>
         <MainDishes />
-        <section className={styles.sectionWines} id="wines"></section>
+        <Vinos />
         <section className={styles.sectionContact} id="contact"></section>
         {/* <section className={styles.section}></section> */}
         <footer className={styles.footer}>

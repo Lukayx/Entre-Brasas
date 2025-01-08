@@ -78,13 +78,13 @@
 }
 
 .collapsed ul li span{
-  /* opacity: 0; */
+  opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
 
 .collapsed .schedule{
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 
@@ -95,15 +95,17 @@
 }
 
 .nav .socialMedia .iconNav{
-  width: 24px;
-  height: 24px;
-  border-radius: 20px;
-  padding: 5px;
-  /* color: rgb(34, 89, 208); */
-  color: #1d1d1d;
-  background-color: #fff;
-  justify-self: center;
+  min-width: 24px;
+  min-height: 24px;
+  max-height: 24px;
+  color: #f6f6f6;
 }
+
+.nav .socialMedia li{
+  padding: 16px;
+}
+
+
 
 .socialMedia{
   display: grid;
