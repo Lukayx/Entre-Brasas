@@ -126,7 +126,7 @@
     border: none;
   }
 
-  .nav ul{
+  .nav .navLinks{
     width: 100%;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -136,12 +136,63 @@
     padding: 0;
   }
 
-  .nav .socialMedia,
-  .nav .schedule{
-    display: none;
+  .nav .socialMedia{
+    bottom: 70px;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding: 15px 15px;
+  }
+  
+  .nav .socialMedia li{
+    background-color: #202020;
+    border-radius: 10px;
+    border: 1px solid #cccccc6d;
   }
 
-  .nav ul li:not(:last-child){
+  .nav .socialMedia li:active{
+    background-color: #2e2e2e;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav .socialMedia .iconNav{
+    justify-self: center;
+  }
+  
+  .nav .schedule{
+    top: -80vh;
+    width: 100%;
+    flex-direction: row;
+    background-color: #212121;
+    padding: 15px;
+  }
+
+  .nav .schedule::after{
+    content: 'Horario';
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    font-size: 3.3rem;
+    width: 100%;
+    text-align: center;
+    background: #212121;
+    font-weight: 600;
+    font-family: 'Tangerine';
+  }
+
+  .nav .schedule,
+  .nav .socialMedia{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    transition: all .4s ease;
+  }
+
+
+
+  .nav .navLinks li:not(:last-child){
     border-left: #6e6e6e solid 1px;    
   }
 
@@ -167,7 +218,7 @@
 
   }
 
-  .nav .iconNav{
+  .nav .navLinks .iconNav{
     padding-top: 20px;
   }
 
@@ -187,10 +238,10 @@
   .nav::before{
     content: '';
     position: absolute;
-    top: -90vh;
+    top: -100vh;
     right: 0;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     background-color: #1d1d1d;
     z-index: 1;
     transition: 0.4s ease;
@@ -199,11 +250,17 @@
   .collapsed::before{
     content: '';
     position: absolute;
-    top: -90vh;
+    top: -100vh;
     right: 0;
     width: 0;
-    height: 90vh;
+    height: 100vh;
     background-color: #1d1d1d;
     z-index: 1;
   }
+
+  .collapsed .schedule,
+  .collapsed .socialMedia{
+    left: 150%;
+  }
+
 }

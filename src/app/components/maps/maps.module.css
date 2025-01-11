@@ -1,0 +1,186 @@
+.sectionMaps{
+  background-color: #f6f6f6;
+  min-height: 600px;
+}
+
+.sectionMaps .headerMaps{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.sectionMaps .headerMaps h6{
+  /* text-transform: uppercase; */
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: #d4af37;
+  font-family: 'Tangerine';
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: -5px;
+}
+
+.sectionMaps .headerMaps h1{
+  color: #121212;
+  font-size: 38px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+}
+
+.sectionMaps .headerMaps span{
+  color: #c48827;
+  position: relative;
+}
+
+.sectionMaps .headerMaps span::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -70px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #c48827;
+}
+
+.sectionMaps .headerMaps span::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #c48827;
+}
+
+.sectionMaps main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 250px 200px 50px;
+  grid-template-areas: 
+  "info map"
+  "contact map"
+  "mapLink map";
+  gap: 30px;
+  padding: 30px 40px;
+}
+
+.sectionMaps .info{
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionMaps .info p{
+  font-size: clamp(.8rem, 2vw,.9rem);
+  color: #3b3b3b;
+  padding: 20px;
+  text-align: center;
+}
+
+.sectionMaps .info span{
+  font-family: 'tangerine';
+  color: #c48827;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.sectionMaps .info h3{
+  color: #121212;
+  font-size: 2.3rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-family: 'tangerine';
+  text-align: center;
+  width: 100%;
+  background-color: rgb(70, 70, 70);
+  color: #f6f6f6;
+  padding-top: 8px;
+}
+
+
+.sectionMaps .map{
+  grid-area: map;
+  width: 100%;
+  height: 100%;
+}
+
+.sectionMaps .mapLink{
+  grid-area: mapLink;
+  padding: 10px 20px;
+  text-align: center;
+  border: #3b3b3b solid 2px;
+  color: #3b3b3b;
+  font-weight: 600;
+  transition: .3s all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.sectionMaps .mapLink:hover{
+  background-color: #3b3b3b;
+  color: #f6f6f6;
+}
+
+.sectionMaps .mapLink:active{
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sectionMaps .contactInfo{
+  grid-area: contact;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.sectionMaps .contactInfo article{
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  gap: 20px;
+  margin-left: 20px;
+  color: #3b3b3b;
+}
+
+.sectionMaps .contactInfo .icon{
+  min-width: 20px;
+  min-height: 20px;
+  padding: 10px;
+  border: 2px solid #c48827;
+  color: #c48827;
+  border-radius: 50%;
+}
+
+@media  (max-width: 600px){
+  .sectionMaps main{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 300px auto 50px;
+    grid-template-areas: 
+    "info"
+    "map"
+    "contact"
+    "mapLink";
+  }
+
+  .sectionMaps .contactInfo{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .sectionMaps .info p{
+    text-align: center;
+  }
+
+  .sectionMaps .contactInfo article{
+    flex: 1 1 220px;
+    margin: 0;
+  }
+}

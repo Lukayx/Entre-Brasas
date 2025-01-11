@@ -1,0 +1,52 @@
+.reservation{
+  position: fixed;
+  top: 30%;
+  right: -290px;
+  width: 340px;
+  height: fit-content;
+  background: #212121;
+  color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  /* gap: 20px; */
+  transition: right 0.3s ease;
+  z-index: 2;
+  border-radius: 10px 0 0px 10px;
+  border: 2px solid #c48827;
+  cursor: pointer;
+}
+
+.open{
+  right: 0 !important;
+}
+
+.iconRes{
+  color: #f6f6f6;
+  width: 20px;
+  height: 26px;
+  margin-left: 3px;
+}
+
+.reservation:hover{
+  right: -280px;
+} 
+/* #c48827 */
+
+.textRes {
+  font-size: 1.3rem;
+  padding: 10px 5px;
+  width: 50px;
+  writing-mode: vertical-rl;
+  letter-spacing: 4px;
+  transform: rotate(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

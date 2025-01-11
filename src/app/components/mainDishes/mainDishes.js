@@ -72,15 +72,19 @@ export default function MainDishes() {
               alt="Plato 3"
             />
           </div>
+          {/* <div className={styles.line}>
+            <span></span>
+          </div> */}
           <div className={styles.dishesTextDiv}>
-            <span id={styles.span1}>
-              En nuestro restaurante ofrecemos una experiencia gastronómica única.
+            <span className={styles.spanCard}>
+              En nuestro restaurante ofrecemos una experiencia gastronómica
+              única.
             </span>
-            <span id={styles.span2}>
+            <span className={styles.spanCard}>
               Especialidades en carnes a las brasas, pescados y platos
               vegetarianos.
             </span>
-            <span id={styles.span3}>
+            <span className={styles.spanCard}>
               Honramos la cocina chilena con recetas tradicionales.
             </span>
           </div>
@@ -95,9 +99,9 @@ export default function MainDishes() {
             className={styles.img}
             width={200}
             height={300}
-            alt="Plato 3"
+            alt="Guarnición 1"
           />
-          <span>
+          <span className={styles.spanCard}>
             Ofrecemos guarniciones únicas como variedades de risottos, cremoso
             de choclo y espinaca, verduras salteadas y mas acompañamientos
             perfectos para complementar cada plato.
@@ -105,17 +109,36 @@ export default function MainDishes() {
           <Image
             src="/Platos/Guarn2.webp"
             className={styles.img}
-            width={200}
+            width={450}
             height={300}
-            alt="Plato 3"
+            alt="Guarnición 2"
           />
         </section>
       )}
 
       {/* section para Postres */}
       {selectedOption === 2 && (
-        <section className={styles.postres}>
-          <h2>Sección Postres</h2>
+        <section className={styles.desserts}>
+          <Image
+            src="/Platos/pos1.webp"
+            className={styles.img}
+            width={200}
+            height={300}
+            alt="Postre 1"
+          />
+          <span className={styles.spanCard}>
+            Endulza tu experiencia con nuestros irresistibles postres. Disfruta
+            del clásico tiramisú, el volcán de chocolate con helado, el cremoso
+            brownie con helado, o la delicadeza de nuestro crème brûlée.
+            Opciones perfectas para cerrar tu comida con un toque de dulzura.
+          </span>
+          <Image
+            src="/Platos/pos2.jpg"
+            className={styles.img}
+            width={200}
+            height={300}
+            alt="Postre 2"
+          />
         </section>
       )}
     </section>

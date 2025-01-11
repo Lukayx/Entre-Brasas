@@ -32,6 +32,7 @@ export default function RootLayout({ children }) {
       <body className={saira.className}>
         {children}
       </body>
+
     </html>
   );
 }

@@ -1,0 +1,174 @@
+.sectionWines{
+  width: calc(100% - 40px);
+  min-height: 600px;
+  display: grid;
+  grid-template-rows: 200px auto 1fr;
+  gap: 20px;
+  /* background-color: #212121; */
+}
+
+.winesCarrousel{
+  grid-row: 3 / 4;
+}
+
+.headerWines{
+  grid-row: 1 / 2;
+}
+
+.card{
+  grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card{
+  /* background-color: rgb(29, 29, 29); */
+  /* background-color: #333; */
+  /* padding: 20px; */
+  /* text-align: center;  */
+  color: #ccc;
+  max-width: 500px;
+  justify-self: center;
+}
+
+.sectionWines .headerWines{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.sectionWines .headerWines h6{
+  /* text-transform: uppercase; */
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: #d4af37;
+  font-family: 'Tangerine';
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: -5px;
+}
+
+.sectionWines .headerWines h1{
+  color: #e8e8e8;
+  font-size: 38px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+}
+
+.sectionWines .headerWines span{
+  color: #c48827;
+  position: relative;
+}
+
+.sectionWines .headerWines span::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -70px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #c48827;
+}
+
+.sectionWines .headerWines span::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #c48827;
+}
+
+.sectionWines .winesCarrousel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;  
+}
+
+.sectionWines .winesCarrousel .winesCarrouselButtons{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.sectionWines .winesCarrousel .winesCarrouselButtons button{
+  border: none;
+  padding: 20px;
+  background: none;
+  color: #cb8a22;
+  font-size: 1rem;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.sectionWines .winesCarrousel .winesCarrouselButtons div{
+  border: #cb8a22 2px solid;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  rotate: 45deg;
+}
+
+.sectionWines .winesCarrousel .winesCarrouselButtons div span{
+  background-color: #cb8a22;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+}
+
+.winesCarrousel span::after{
+  content: var(--current-image);
+  position: absolute;
+  color: #f6f6f6;
+  rotate: -45deg;
+}
+
+
+
+.imgContainer{
+  position: relative;
+  width: 300px;
+  height: 450px;
+}
+
+.img{
+  /* background-color: #f6f6f6; */
+  /* padding: 5px; */
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.img.active {
+  opacity: 1;
+}
+
+.img.inactive {
+  opacity: 0;
+}

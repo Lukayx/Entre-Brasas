@@ -1,26 +1,31 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import NavBar from "./navBar";
-import MainDishes from "./mainDishes";
-import Vinos from "./vinos";
+import NavBar from "./components/navBar/navBar";
+import MainDishes from "./components/mainDishes/mainDishes";
+import Wines from "./components/wines/wines";
+import Maps from "./components/maps/maps";
+import Reservation from "./components/reservation/reservation";
 
 export default function Home() {
   return (
     <>
       <NavBar />
       <div className={styles.page}>
+        <Reservation />
         <header className={styles.header}>
           <Image
             src="/header.webp"
             className={styles.headerImagePC}
-            fill
+            width={2992}
+            height={1683}
             alt="Header image"
             priority
           />
           <Image
             src="/header.jpg"
-            className={styles.headerImageMovile}
-            fill
+            className={styles.headerImageMobile}
+            width={1170}
+            height={1466}
             alt="Header image"
             priority
           />
@@ -63,18 +68,10 @@ export default function Home() {
             height={500} // Proporción base
             alt="Quienes somos"
           />
-          {/* <Image
-            src="/UsHeader.webp"
-            className={styles.usImagee}
-            width={1920} // Proporción base
-            height={500} // Proporción base
-            alt="Quienes somos"
-          /> */}
         </section>
         <MainDishes />
-        <Vinos />
-        <section className={styles.sectionContact} id="contact"></section>
-        {/* <section className={styles.section}></section> */}
+        <Wines />
+        <Maps />
         <footer className={styles.footer}>
           <p>Entre Brasas</p>
           <p>Valdivia, Chile</p>
