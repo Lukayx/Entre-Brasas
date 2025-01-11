@@ -1,6 +1,14 @@
 .sectionMaps{
   background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 600px;
+}
+
+.sectionMaps.headerMaps,
+.sectionMaps main{
+  max-width: 1980px;
 }
 
 .sectionMaps .headerMaps{

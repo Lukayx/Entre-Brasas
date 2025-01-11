@@ -1,10 +1,15 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 import styles from "./wines.module.css";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight, faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowLeft,
+  faArrowRight,
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Vinos() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -24,18 +29,38 @@ export default function Vinos() {
 
   return (
     <section className={styles.sectionWines} id="wines">
+    <main>
       <header className={styles.headerWines}>
         <h6>Disfrutemos juntos</h6>
         <h1>Cata de vinos</h1>
         <span>◆</span>
       </header>
+      <span className={styles.card}>
+        <p>
+          Explora una selección única de etiquetas chilenas cuidadosamente
+          elegidas para realzar cada momento. Disfruta vinos de prestigiosas
+          viñas como <b>Miguel Torres, Concha y Toro y Casa Silva,</b> seleccionados
+          para acompañar a la perfección nuestros platillos.
+        </p>
+        <p>Cada copa está
+          diseñada para resaltar sabores y texturas, creando un maridaje
+          inolvidable que transforma cada comida en una experiencia única.
+        </p>
+        <p>
+          <b>Descubre el arte del vino</b> y déjate llevar por la pasión que nos
+          define.
+        </p>
+      </span>
+    </main>
       <section className={styles.winesCarrousel}>
         <div className={styles.imgContainer}>
           {images.map((image, index) => (
             <Image
               key={index}
               src={image.src}
-              className={`${styles.img} ${index === currentImage ? styles.active : styles.inactive}`}
+              className={`${styles.img} ${
+                index === currentImage ? styles.active : styles.inactive
+              }`}
               width={300}
               height={450}
               alt={image.alt}
@@ -48,9 +73,11 @@ export default function Vinos() {
             Anterior
           </button>
           <div>
-            <span style={{
-              "--current-image": `"${currentImage}"`, // Asegúrate de poner las comillas si es texto
-            }}></span>
+            <span
+              style={{
+                "--current-image": `"${currentImage}"`, // Asegúrate de poner las comillas si es texto
+              }}
+            ></span>
           </div>
           <button className={styles.buttonRight} onClick={handleNext}>
             Siguiente
@@ -58,14 +85,6 @@ export default function Vinos() {
           </button>
         </div>
       </section>
-      <span className={styles.card}>
-        Nuestra carta de vinos ha sido cuidadosamente seleccionada para ofrecer
-        etiquetas de prestigiosas viñas chilenas como Miguel Torres, Concha y
-        Toro, Casa Silva, entre otras.
-        Cada vino ha sido elegido pensando en
-        realzar los sabores de nuestros platos, brindándote el maridaje perfecto
-        para disfrutar de una experiencia gastronómica completa.
-      </span>
     </section>
   );
 }
