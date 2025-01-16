@@ -20,11 +20,11 @@
   margin-top: 30px;
 }
 
-.sectionMaps .headerMaps h6{
+.sectionMaps .headerMaps .slogan{
   /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 400;
-  color: #d4af37;
+  color: #995d0b;
   font-family: 'Tangerine';
   font-size: 32px;
   text-align: center;
@@ -40,12 +40,12 @@
   position: relative;
 }
 
-.sectionMaps .headerMaps span{
+.sectionMaps .headerMaps span:last-child{
   color: #c48827;
   position: relative;
 }
 
-.sectionMaps .headerMaps span::before{
+.sectionMaps .headerMaps span:last-child::before{
   content: '';
   position: absolute;
   top: 50%;
@@ -56,7 +56,7 @@
   background-color: #c48827;
 }
 
-.sectionMaps .headerMaps span::after{
+.sectionMaps .headerMaps span:last-child::after{
   content: '';
   position: absolute;
   top: 50%;
@@ -76,7 +76,7 @@
   "contact map"
   "mapLink map";
   gap: 30px;
-  padding: 30px 40px;
+  padding: 30px;
 }
 
 .sectionMaps .info{
@@ -94,12 +94,12 @@
 
 .sectionMaps .info span{
   font-family: 'tangerine';
-  color: #c48827;
+  color: #866702;
   font-size: 1.8rem;
   text-align: center;
 }
 
-.sectionMaps .info h3{
+.sectionMaps .info h1{
   color: #121212;
   font-size: 2.3rem;
   font-weight: 400;

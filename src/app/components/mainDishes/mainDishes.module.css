@@ -17,11 +17,11 @@
   margin-top: 30px;
 }
 
-.sectionMainDishes .headerUs h6{
+.sectionMainDishes .headerUs .slogan{
   /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 400;
-  color: #d4af37;
+  color: #995d0b;
   font-family: 'Tangerine';
   font-size: 32px;
   text-align: center;
@@ -37,12 +37,12 @@
   position: relative;
 }
 
-.sectionMainDishes .headerUs span{
+.sectionMainDishes .headerUs span:last-child{
   color: #c48827;
   position: relative;
 }
 
-.sectionMainDishes .headerUs span::before{
+.sectionMainDishes .headerUs span:last-child::before{
   content: '';
   position: absolute;
   top: 50%;
@@ -53,7 +53,7 @@
   background-color: #c48827;
 }
 
-.sectionMainDishes .headerUs span::after{
+.sectionMainDishes .headerUs span:last-child::after{
   content: '';
   position: absolute;
   top: 50%;

@@ -44,7 +44,7 @@
   margin-top: 30px;
 }
 
-.sectionWines .headerWines h6{
+.sectionWines .headerWines .slogan{
   /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 400;
@@ -64,12 +64,12 @@
   position: relative;
 }
 
-.sectionWines .headerWines span{
+.sectionWines .headerWines span:last-child{
   color: #c48827;
   position: relative;
 }
 
-.sectionWines .headerWines span::before{
+.sectionWines .headerWines span:last-child::before{
   content: '';
   position: absolute;
   top: 50%;
@@ -80,7 +80,7 @@
   background-color: #c48827;
 }
 
-.sectionWines .headerWines span::after{
+.sectionWines .headerWines span:last-child::after{
   content: '';
   position: absolute;
   top: 50%;

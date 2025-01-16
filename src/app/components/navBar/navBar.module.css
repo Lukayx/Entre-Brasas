@@ -1,3 +1,7 @@
+body > .sidebar {
+  will-change: transform;
+}
+
 .nav{
   display: flex;
   flex-direction: column;
@@ -65,7 +69,6 @@
   align-items: center;
   justify-content: center;
   padding: 0 10px;
-  /* opacity: 1; */
   transition: opacity 0.3s ease;
 }
 
@@ -81,10 +84,6 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-}
-
-.collapsed .schedule{
-  /* opacity: 0; */
 }
 
 
@@ -104,8 +103,6 @@
 .nav .socialMedia li{
   padding: 16px;
 }
-
-
 
 .socialMedia{
   display: grid;
@@ -142,6 +139,7 @@
     width: 100%;
     gap: 10px;
     padding: 15px 15px;
+    background-color: #212121;
   }
   
   .nav .socialMedia li{
@@ -160,7 +158,7 @@
   }
   
   .nav .schedule{
-    top: -80vh;
+    top: calc(-80dvh + 30px);
     width: 100%;
     flex-direction: row;
     background-color: #212121;
@@ -179,6 +177,7 @@
     background: #212121;
     font-weight: 600;
     font-family: 'Tangerine';
+    padding-top: 10px;
   }
 
   .nav .schedule,
@@ -189,8 +188,6 @@
     z-index: 3;
     transition: all .4s ease;
   }
-
-
 
   .nav .navLinks li:not(:last-child){
     border-left: #6e6e6e solid 1px;    
@@ -262,5 +259,4 @@
   .collapsed .socialMedia{
     left: 150%;
   }
-
 }

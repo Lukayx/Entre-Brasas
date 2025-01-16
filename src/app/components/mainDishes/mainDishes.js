@@ -16,7 +16,7 @@ export default function MainDishes() {
   return (
     <section className={styles.sectionMainDishes} id="main-dishes">
       <header className={styles.headerUs}>
-        <h6>Disfrutemos juntos</h6>
+        <span className={styles.slogan}>Disfrutemos juntos</span>
         <h1>Platos principales</h1>
         <span>◆</span>
       </header>
@@ -56,6 +56,7 @@ export default function MainDishes() {
               width={200}
               height={300}
               alt="Plato 1"
+              loading="lazy"
             />
             <Image
               src="/Platos/PP2.webp"
@@ -63,6 +64,7 @@ export default function MainDishes() {
               width={200}
               height={300}
               alt="Plato 2"
+              loading="lazy"
             />
             <Image
               src="/Platos/PP3.webp"
@@ -70,6 +72,7 @@ export default function MainDishes() {
               width={200}
               height={300}
               alt="Plato 3"
+              loading="lazy"
             />
           </div>
           {/* <div className={styles.line}>
@@ -100,6 +103,7 @@ export default function MainDishes() {
             width={200}
             height={300}
             alt="Guarnición 1"
+            loading="lazy"
           />
           <span className={styles.spanCard}>
             Ofrecemos guarniciones únicas como variedades de risottos, cremoso
@@ -112,6 +116,7 @@ export default function MainDishes() {
             width={450}
             height={300}
             alt="Guarnición 2"
+            loading="lazy"
           />
         </section>
       )}
@@ -125,6 +130,7 @@ export default function MainDishes() {
             width={200}
             height={300}
             alt="Postre 1"
+            loading="lazy"
           />
           <span className={styles.spanCard}>
             Endulza tu experiencia con nuestros irresistibles postres. Disfruta
@@ -133,11 +139,12 @@ export default function MainDishes() {
             Opciones perfectas para cerrar tu comida con un toque de dulzura.
           </span>
           <Image
-            src="/Platos/pos2.jpg"
+            src="/Platos/pos2.webp"
             className={styles.img}
             width={200}
             height={300}
             alt="Postre 2"
+            loading="lazy"
           />
         </section>
       )}

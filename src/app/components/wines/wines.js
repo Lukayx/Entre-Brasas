@@ -5,8 +5,6 @@ import styles from "./wines.module.css";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faArrowLeft,
-  faArrowRight,
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
@@ -16,7 +14,7 @@ export default function Vinos() {
   const images = [
     { src: "/Vinos/vino1.webp", alt: "Vino 1" },
     { src: "/Vinos/vino2.webp", alt: "Vino 2" },
-    { src: "/Vinos/vino3.jpg", alt: "Vino 3" },
+    { src: "/Vinos/vino3.webp", alt: "Vino 3" },
   ];
 
   const handlePrev = () => {
@@ -31,7 +29,7 @@ export default function Vinos() {
     <section className={styles.sectionWines} id="wines">
     <main>
       <header className={styles.headerWines}>
-        <h6>Disfrutemos juntos</h6>
+        <span className={styles.slogan}>Disfrutemos juntos</span>
         <h1>Cata de vinos</h1>
         <span>◆</span>
       </header>
@@ -64,6 +62,7 @@ export default function Vinos() {
               width={300}
               height={450}
               alt={image.alt}
+              loading="lazy"
             />
           ))}
         </div>

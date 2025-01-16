@@ -1,0 +1,138 @@
+.sectionUs{
+  max-width: 1980px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 300px auto;
+  min-height: 600px;
+  grid-template-areas: 
+  "head img1 img1 "
+  "txt0 txt1 txt2 ";
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.sectionUs .headerUs{
+  background: #212121;
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23141414' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  grid-area: head;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5) ;
+}
+
+.sectionUs .headerUs .slogan{
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: #d4af37;
+  font-family: 'Tangerine';
+  font-size: 32px;
+  text-align: center;
+}
+
+.sectionUs .usImage{
+  object-fit: cover; /* Ajusta las imágenes al espacio */
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5) ;
+}
+
+.sectionUs .usImage{
+  grid-area: img1;
+}
+
+.sectionUs h1{
+  color: rgb(226, 226, 226);
+  font-size: 38px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  line-height: 1.1;
+}
+
+.sectionUs header span:last-child{
+  color: #c48827;
+  position: relative;
+}
+
+.sectionUs header span:last-child::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -70px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #c48827;
+}
+
+.sectionUs header span:last-child::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #c48827;
+}
+
+.sectionUs .card{
+  background: #212121;
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23141414' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  color: #e1e1e1;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5) ;
+  border-top: 2px solid #c48827;
+  position: relative;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  padding: 26px;
+}
+
+.sectionUs .card::before{
+  content: '◆';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #c48827;
+}
+
+.sectionUs #c1{
+  grid-area: txt0;
+}
+
+.sectionUs #c2{
+  grid-area: txt1;
+}
+
+.sectionUs #c3{
+  grid-area: txt2;
+}
+
+@media (max-width: 960px) {
+  .sectionUs{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px repeat(3, minmax(130px, auto));
+    grid-template-areas: 
+    "head img1 img1"
+    "txt0 txt0 txt0"
+    "txt1 txt1 txt1"
+    "txt2 txt2 txt2";
+  }
+}
+
+@media (max-width: 770px) {
+  .sectionUs{
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px calc(100vw*0.6 - 4rem) repeat(3, minmax(130px, auto));
+    grid-template-areas: 
+    "head"
+    "img1"
+    "txt0"
+    "txt1"
+    "txt2";
+  }
+}
