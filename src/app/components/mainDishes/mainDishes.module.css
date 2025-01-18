@@ -194,11 +194,6 @@
   }
 }
 
-/* .sectionMainDishes section{
-  display: flex;
-  align-items: center;
-} */
-
 .sectionMainDishes section .spanCard{
   padding: 20px;
   font-size: .8rem;
@@ -224,50 +219,6 @@
   transform: translateX(-50%);
   color: #c48827;
 }
-/* 
-.dishes .line{
-  border: #cb8a22 2px solid;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} 
-
-.dishes .line span::before{
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -320px;
-  transform: translateY(-50%);
-  max-width: 300px;
-  width: 300px;
-  height: 5px;
-  border-top: #cb8a22 2px solid;
-  border-bottom: #cb8a22 2px solid;
-}
-
-.dishes .line span::after{
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -320px;
-  transform: translateY(-50%);
-  max-width: 300px;
-  width: 300px;
-  height: 5px;
-  border-top: #cb8a22 2px solid;
-  border-bottom: #cb8a22 2px solid;
-}
-
-.dishes .line span{
-  background-color: #cb8a22;
-  padding: 5px;
-  width: 20px;
-  height: 20px;
-  position: relative;
-} */
 
 .img{
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);

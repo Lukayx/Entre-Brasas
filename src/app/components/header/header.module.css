@@ -19,12 +19,6 @@
   z-index: 1;
 }
 
-.header .headerImage{
-  object-fit: cover;
-  width: 100%;
-  height: 600px;
-}
-
 .header::after{
   content: '';
   position: absolute;
@@ -50,7 +44,7 @@
   position: relative;
   z-index: 1; 
   color: #f6f6f6d7;
-  font-size: clamp(1.2rem, 5vw, 1.8rem);
+  font-size: clamp(1.2rem, 5dvw, 1.8rem);
   /* font-size: 1.8rem; */
   font-weight: 300;
   letter-spacing: 4px;
@@ -64,7 +58,7 @@
   left: max(calc(-15vw - 1.2rem), -120px);
   transform: translateY(-50%);
   max-width: 100px;
-  width: 15vw;
+  width: 15dvw;
   height: 2px;
   background-color: #f6f6f6d7;
   z-index: 1;
@@ -172,7 +166,7 @@
 
 /* Estilos para el contenido del modal */
 .modalContent p {
-  font-size: clamp(.8rem, 2vw, .9rem);
+  font-size: clamp(.8rem, 2dvw, .9rem);
   color: #333;
 }
 
@@ -244,7 +238,7 @@
   color: #fff;
   padding: 8px 15px;
   border-radius: 5px;
-  font-size: clamp(.6rem, 2vw, .8rem);
+  font-size: clamp(.6rem, 2dvw, .8rem);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   visibility: visible;

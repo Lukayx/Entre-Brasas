@@ -1,13 +1,13 @@
 .sectionUs{
-  max-width: 1980px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 300px auto;
+  grid-template-rows: 300px minmax(140px, auto);
   min-height: 600px;
   grid-template-areas: 
   "head img1 img1 "
   "txt0 txt1 txt2 ";
   gap: 2rem;
+  max-width: 100%; /* Asegura que el ancho no supere el contenedor */
   padding: 2rem;
 }
 
@@ -32,14 +32,11 @@
 }
 
 .sectionUs .usImage{
-  object-fit: cover; /* Ajusta las imágenes al espacio */
-  width: 100%;
-  height: 100%;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5) ;
-}
-
-.sectionUs .usImage{
   grid-area: img1;
+  object-fit: cover; /* Ajusta las imágenes al espacio */
+  max-width: 100%;
+  height: 100%; /* Mantiene la proporción de la imagen */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5) ;
 }
 
 .sectionUs h1{
@@ -87,8 +84,11 @@
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5) ;
   border-top: 2px solid #c48827;
   position: relative;
-  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-size: min(calc(.4rem + 1dvw), 1rem); /* Ajuste del tamaño de fuente */
   padding: 26px;
+  overflow-wrap: break-word; /* Evita desbordamiento de texto */
+  word-break: break-word;
+  max-height: 250px; /* Limita la altura del contenedor */
 }
 
 .sectionUs .card::before{
@@ -112,10 +112,10 @@
   grid-area: txt2;
 }
 
-@media (max-width: 960px) {
+@media screen and (max-width: 960px) {
   .sectionUs{
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 300px repeat(3, minmax(130px, auto));
+    grid-template-rows: 300px repeat(3, minmax(12dvh, auto));
     grid-template-areas: 
     "head img1 img1"
     "txt0 txt0 txt0"
@@ -124,15 +124,16 @@
   }
 }
 
-@media (max-width: 770px) {
+@media screen and (max-width: 770px) {
   .sectionUs{
     grid-template-columns: 1fr;
-    grid-template-rows: 250px calc(100vw*0.6 - 4rem) repeat(3, minmax(130px, auto));
+    grid-template-rows: 250px calc(100dvw*0.6 - 4rem) repeat(3, minmax(11dvh, auto));
     grid-template-areas: 
     "head"
     "img1"
     "txt0"
     "txt1"
     "txt2";
+    padding: 4dvw;
   }
 }

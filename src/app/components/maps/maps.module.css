@@ -6,11 +6,6 @@
   min-height: 600px;
 }
 
-.sectionMaps.headerMaps,
-.sectionMaps main{
-  max-width: 1980px;
-}
-
 .sectionMaps .headerMaps{
   width: 100%;
   display: flex;
@@ -86,7 +81,7 @@
 }
 
 .sectionMaps .info p{
-  font-size: clamp(.8rem, 2vw,.9rem);
+  font-size: clamp(.8rem, 2dvw,.9rem);
   color: #3b3b3b;
   padding: 20px;
   text-align: center;

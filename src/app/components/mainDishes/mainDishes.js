@@ -51,33 +51,33 @@ export default function MainDishes() {
         <section className={styles.dishes}>
           <div className={styles.dishesImageDiv}>
             <Image
-              src="/Platos/PP1.webp"
+              src="/platos/PP1.webp"
               className={styles.img}
               width={200}
               height={300}
               alt="Plato 1"
+              placeholder="blur"
               loading="lazy"
             />
             <Image
-              src="/Platos/PP2.webp"
+              src="/platos/PP2.webp"
               className={styles.img}
               width={200}
               height={300}
               alt="Plato 2"
+              placeholder="blur"
               loading="lazy"
             />
             <Image
-              src="/Platos/PP3.webp"
+              src="/platos/PP3.webp"
               className={styles.img}
               width={200}
               height={300}
               alt="Plato 3"
+              placeholder="blur"
               loading="lazy"
             />
           </div>
-          {/* <div className={styles.line}>
-            <span></span>
-          </div> */}
           <div className={styles.dishesTextDiv}>
             <span className={styles.spanCard}>
               En nuestro restaurante ofrecemos una experiencia gastronómica
@@ -98,11 +98,12 @@ export default function MainDishes() {
       {selectedOption === 1 && (
         <section className={styles.fittings}>
           <Image
-            src="/Platos/Guarn1.webp"
+            src="/platos/Guarn1.webp"
             className={styles.img}
             width={200}
             height={300}
             alt="Guarnición 1"
+            placeholder="blur"
             loading="lazy"
           />
           <span className={styles.spanCard}>
@@ -111,11 +112,12 @@ export default function MainDishes() {
             perfectos para complementar cada plato.
           </span>
           <Image
-            src="/Platos/Guarn2.webp"
+            src="/platos/Guarn2.webp"
             className={styles.img}
             width={450}
             height={300}
             alt="Guarnición 2"
+            placeholder="blur"
             loading="lazy"
           />
         </section>
@@ -125,11 +127,12 @@ export default function MainDishes() {
       {selectedOption === 2 && (
         <section className={styles.desserts}>
           <Image
-            src="/Platos/pos1.webp"
+            src="/platos/pos1.webp"
             className={styles.img}
             width={200}
             height={300}
             alt="Postre 1"
+            placeholder="blur"
             loading="lazy"
           />
           <span className={styles.spanCard}>
@@ -139,11 +142,12 @@ export default function MainDishes() {
             Opciones perfectas para cerrar tu comida con un toque de dulzura.
           </span>
           <Image
-            src="/Platos/pos2.webp"
+            src="/platos/pos2.webp"
             className={styles.img}
             width={200}
             height={300}
             alt="Postre 2"
+            placeholder="blur"
             loading="lazy"
           />
         </section>

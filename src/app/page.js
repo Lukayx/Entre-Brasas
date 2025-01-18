@@ -17,9 +17,23 @@ export default function Home() {
         <Wines />
         <Maps />
         <footer className={styles.footer}>
-          <p>Entre Brasas</p>
-          <p>Valdivia, Chile</p>
-          <p>2021</p>
+          <div>
+            <p>Entre Brasas</p>
+            <p>Valdivia, Chile</p>
+            <p>2021</p>
+          </div>
+          <p className={styles.footerCredits}>
+            Diseñado por Fernando Inzulza | 
+            <a
+              href="https://www.linkedin.com/in/fernando-jose-inzulza-olavarr%C3%ADa-9a42362a0/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginLeft: "0.3rem", color: '#2bb6ff', textDecoration: 'underline' }}
+
+            >
+              LinkedIn
+            </a>
+          </p>
         </footer>
       </div>
     </>

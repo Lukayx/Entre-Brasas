@@ -77,7 +77,7 @@ export default function Maps() {
           </article>
           <article>
             <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
-            <span>correo@gmail.com</span>
+            <span>entrebrasasvaldivia@gmail.com</span>
           </article>
         </div>
         <div

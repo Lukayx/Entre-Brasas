@@ -12,7 +12,7 @@ body > .sidebar {
   color: #f6f6f6;
   position: fixed;
   z-index: 3;
-  height: 100vh;
+  height: 100dvh;
   transition: 0.4s ease;
   padding: 10px 0;
   border-right: #363636 solid 1px;
@@ -22,15 +22,15 @@ body > .sidebar {
 .nav ul{
   display: flex;
   flex-direction: column;
-  /* gap: .5rem; */
   list-style: none;
   color: #f6f6f6;
   padding: 0 15px;
   gap: 4px;
 }
 
-.nav ul li{
-  padding: 16px 16px;
+.nav .navLinks li,
+.nav .socialMedia .socialLink{
+  padding: 16px;
   width: 100%;
   display: grid;
   grid-template-columns: 24px 1fr;
@@ -100,16 +100,6 @@ body > .sidebar {
   color: #f6f6f6;
 }
 
-.nav .socialMedia li{
-  padding: 16px;
-}
-
-.socialMedia{
-  display: grid;
-  grid-template-columns: 24px 1fr;
-  gap: 4px;
-}
-
 @media (max-width: 768px) {
   .nav {
     position: fixed;
@@ -142,13 +132,13 @@ body > .sidebar {
     background-color: #212121;
   }
   
-  .nav .socialMedia li{
+  .nav .socialMedia .socialLink{
     background-color: #202020;
     border-radius: 10px;
     border: 1px solid #cccccc6d;
   }
 
-  .nav .socialMedia li:active{
+  .nav .socialMedia .socialLink:active{
     background-color: #2e2e2e;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
   }
@@ -235,10 +225,10 @@ body > .sidebar {
   .nav::before{
     content: '';
     position: absolute;
-    top: -100vh;
+    top: -100dvh;
     right: 0;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     background-color: #1d1d1d;
     z-index: 1;
     transition: 0.4s ease;
@@ -247,10 +237,10 @@ body > .sidebar {
   .collapsed::before{
     content: '';
     position: absolute;
-    top: -100vh;
+    top: -100dvh;
     right: 0;
     width: 0;
-    height: 100vh;
+    height: 100dvh;
     background-color: #1d1d1d;
     z-index: 1;
   }

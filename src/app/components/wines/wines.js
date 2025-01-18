@@ -12,9 +12,9 @@ import {
 export default function Vinos() {
   const [currentImage, setCurrentImage] = useState(0);
   const images = [
-    { src: "/Vinos/vino1.webp", alt: "Vino 1" },
-    { src: "/Vinos/vino2.webp", alt: "Vino 2" },
-    { src: "/Vinos/vino3.webp", alt: "Vino 3" },
+    { src: "/vinos/vino1.webp", alt: "Vino 1" },
+    { src: "/vinos/vino2.webp", alt: "Vino 2" },
+    { src: "/vinos/vino3.webp", alt: "Vino 3" },
   ];
 
   const handlePrev = () => {
