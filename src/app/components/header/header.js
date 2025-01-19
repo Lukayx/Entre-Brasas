@@ -66,9 +66,8 @@ export default function Header() {
         fill
         sizes="100vw"
         priority
-        placeholder="blur"
         className={styles.headerImage}
-        styles={{ objectFit: "cover", height: "600px", maxWidth: "100%" }} 
+        style={{ objectFit: "cover", height: "600px", maxWidth: "100%" }} 
       />
       <div className={styles.headerContent}>
         <Image
@@ -77,7 +76,7 @@ export default function Header() {
           width={600} // Proporción base
           height={150} // Proporción base
           alt="Header title"
-          loading="lazy"
+          priority          
         />
         <h2>Restaurant</h2>
         <a href="#us" className={styles.usButton}>
