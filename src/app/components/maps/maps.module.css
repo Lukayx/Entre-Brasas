@@ -81,9 +81,11 @@
 }
 
 .sectionMaps .info p{
-  font-size: clamp(.8rem, 2dvw,.9rem);
+  font-size: clamp(.8rem, 2vw,.9rem);
   color: #3b3b3b;
   padding: 20px;
+  overflow-wrap: break-word; /* Evita desbordamiento de texto */
+  word-break: break-word;
   text-align: center;
 }
 

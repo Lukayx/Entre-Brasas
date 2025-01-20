@@ -44,7 +44,7 @@
   position: relative;
   z-index: 1; 
   color: #f6f6f6d7;
-  font-size: clamp(1.2rem, 5dvw, 1.8rem);
+  font-size: clamp(1.2rem, 5vw, 1.8rem);
   /* font-size: 1.8rem; */
   font-weight: 300;
   letter-spacing: 4px;
@@ -166,7 +166,7 @@
 
 /* Estilos para el contenido del modal */
 .modalContent p {
-  font-size: clamp(.8rem, 2dvw, .9rem);
+  font-size: clamp(.8rem, 2vw, .9rem);
   color: #333;
 }
 
@@ -238,7 +238,7 @@
   color: #fff;
   padding: 8px 15px;
   border-radius: 5px;
-  font-size: clamp(.6rem, 2dvw, .8rem);
+  font-size: clamp(.6rem, 2vw, .8rem);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   visibility: visible;
