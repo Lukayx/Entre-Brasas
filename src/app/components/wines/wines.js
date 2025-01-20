@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "./wines.module.css";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
@@ -53,7 +53,7 @@ export default function Vinos() {
       <section className={styles.winesCarrousel}>
         <div className={styles.imgContainer}>
           {images.map((image, index) => (
-            <Image
+            <ExportedImage
               key={index}
               src={image.src}
               className={`${styles.img} ${

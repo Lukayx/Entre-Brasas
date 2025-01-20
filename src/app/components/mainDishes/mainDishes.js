@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import styles from "./mainDishes.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -50,7 +50,7 @@ export default function MainDishes() {
       {selectedOption === 0 && (
         <section className={styles.dishes}>
           <div className={styles.dishesImageDiv}>
-            <Image
+            <ExportedImage
               src="/platos/PP1.webp"
               className={styles.img}
               width={200}
@@ -59,7 +59,7 @@ export default function MainDishes() {
               placeholder="blur"
               loading="lazy"
             />
-            <Image
+            <ExportedImage
               src="/platos/PP2.webp"
               className={styles.img}
               width={200}
@@ -68,7 +68,7 @@ export default function MainDishes() {
               placeholder="blur"
               loading="lazy"
             />
-            <Image
+            <ExportedImage
               src="/platos/PP3.webp"
               className={styles.img}
               width={200}
@@ -97,7 +97,7 @@ export default function MainDishes() {
       {/* Div para Guarniciones */}
       {selectedOption === 1 && (
         <section className={styles.fittings}>
-          <Image
+          <ExportedImage
             src="/platos/Guarn1.webp"
             className={styles.img}
             width={200}
@@ -111,7 +111,7 @@ export default function MainDishes() {
             de choclo y espinaca, verduras salteadas y mas acompañamientos
             perfectos para complementar cada plato.
           </span>
-          <Image
+          <ExportedImage
             src="/platos/Guarn2.webp"
             className={styles.img}
             width={450}
@@ -126,7 +126,7 @@ export default function MainDishes() {
       {/* section para Postres */}
       {selectedOption === 2 && (
         <section className={styles.desserts}>
-          <Image
+          <ExportedImage
             src="/platos/pos1.webp"
             className={styles.img}
             width={200}
@@ -141,7 +141,7 @@ export default function MainDishes() {
             brownie con helado, o la delicadeza de nuestro crème brûlée.
             Opciones perfectas para cerrar tu comida con un toque de dulzura.
           </span>
-          <Image
+          <ExportedImage
             src="/platos/pos2.webp"
             className={styles.img}
             width={200}

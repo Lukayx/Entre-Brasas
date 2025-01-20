@@ -2,9 +2,12 @@
 
 import { useState, useEffect } from "react";
 import styles from "./header.module.css";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy, faPhone } from "@fortawesome/free-solid-svg-icons";
+import portraitMobile from "../../../../public/header1.webp";
+import portraitPc from "../../../../public/header2.webp";
+import title from "../../../../public/headerTitle.png";
 
 function useMediaQuery(query) {
   const [matches, setMatches] = useState(false);
@@ -57,8 +60,8 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <Image
-        src={isMobile ? "/header1.webp" : "/header2.webp"}
+      <ExportedImage
+        src={isMobile ? portraitMobile : portraitPc}
         // width={isMobile ? 500 : 1892}
         // height={isMobile ? 626 : 1064}
         alt="Header image"
@@ -70,8 +73,8 @@ export default function Header() {
         style={{ objectFit: "cover", height: "600px", maxWidth: "100%" }} 
       />
       <div className={styles.headerContent}>
-        <Image
-          src="/headerTitle.png"
+        <ExportedImage
+          src={title}
           className={styles.headerTitle}
           width={600} // Proporción base
           height={150} // Proporción base

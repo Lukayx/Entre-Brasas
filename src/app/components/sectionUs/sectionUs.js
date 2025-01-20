@@ -1,5 +1,5 @@
 import styles from "./sectionUs.module.css";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 
 export default function SectionUs() {
   return (
@@ -23,11 +23,11 @@ export default function SectionUs() {
         platos cuidadosamente diseñados, vinos de excelencia y postres que
         capturan el alma de nuestra cocina.
       </span>
-      <Image
+      <ExportedImage
         src="/UsHeader.webp"
         className={styles.usImage}
-        width={1266} // Proporción base
-        height={745} // Proporción base
+        width={900} // Proporción base
+        height={500} // Proporción base
         alt="Quienes somos"
         loading="lazy"
       />
