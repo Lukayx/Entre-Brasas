@@ -6,7 +6,7 @@ import ExportedImage from "next-image-export-optimizer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy, faPhone } from "@fortawesome/free-solid-svg-icons";
 import portraitMobile from "../../../../public/header1.webp";
-import portraitPc from "../../../../public/UsHeader.webp";
+import portraitPc from "../../../../public/headerTemporal.webp";
 // import portraitPc from "../../../../public/header2.webp";
 import title from "../../../../public/headerTitle.png";
 
