@@ -10,6 +10,9 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden; /* Evita desbordamientos horizontales */
   width: 100%;
+  -webkit-text-size-adjust: 100%; /* Safari */
+  -ms-text-size-adjust: 100%;    /* IE */
+  text-size-adjust: 100%;        /* Estándar */
 }
 
 body {
