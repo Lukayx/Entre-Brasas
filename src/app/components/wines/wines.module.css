@@ -45,7 +45,6 @@
 }
 
 .sectionWines .headerWines .slogan{
-  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: 400;
   color: #d4af37;
@@ -174,7 +173,7 @@
   opacity: 0;
 }
 
-@media (max-width: 690px){
+@media screen and (max-width: 690px){
   .sectionWines{
     grid-template-columns: 1fr;
   }  

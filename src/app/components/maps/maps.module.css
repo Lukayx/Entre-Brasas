@@ -81,11 +81,10 @@
 }
 
 .sectionMaps .info p{
-  font-size: clamp(.8rem, 2vw,.9rem);
+  font-size: clamp(.8rem, 1.75vw, .9rem);
   color: #3b3b3b;
   padding: 20px;
   overflow-wrap: break-word; /* Evita desbordamiento de texto */
-  word-break: break-word;
   text-align: center;
 }
 
@@ -154,6 +153,11 @@
   color: #3b3b3b;
 }
 
+.sectionMaps .contactInfo article span{
+  font-size: 1rem;
+  overflow-wrap: break-word; /* Evita desbordamiento de texto */
+}
+
 .sectionMaps .contactInfo .icon{
   min-width: 20px;
   min-height: 20px;
@@ -163,7 +167,7 @@
   border-radius: 50%;
 }
 
-@media  (max-width: 600px){
+@media screen and (max-width: 600px){
   .sectionMaps main{
     grid-template-columns: 1fr;
     grid-template-rows: auto 300px auto 50px;
@@ -180,10 +184,6 @@
     justify-content: center;
   }
   
-  .sectionMaps .info p{
-    text-align: center;
-  }
-
   .sectionMaps .contactInfo article{
     flex: 1 1 220px;
     margin: 0;
