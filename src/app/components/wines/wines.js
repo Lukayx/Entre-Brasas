@@ -30,7 +30,7 @@ export default function Vinos() {
     <main>
       <header className={styles.headerWines}>
         <span className={styles.slogan}>Disfrutemos juntos</span>
-        <h1>Cata de vinos</h1>
+        <h1>Carta de vinos</h1>
         <span>◆</span>
       </header>
       <span className={styles.card}>

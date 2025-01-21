@@ -10,7 +10,7 @@ export default function SectionUs() {
         <span>◆</span>
       </header>
       <span className={styles.card} id={styles.c1}>
-        Fundado en 2021, nuestro restaurante nació con la misión de unir a
+        Fundado en 2020, nuestro restaurante nació con la misión de unir a
         las personas en torno a la mesa, celebrando lo mejor de la
         gastronomía chilena.
       </span>
