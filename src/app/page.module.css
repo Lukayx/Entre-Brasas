@@ -1,6 +1,6 @@
 .page{
   min-height: 100%;
-  width: 100%;
+  width: 100vw;
   max-width: 1980px;
   padding-left: 88px;
   display: flex;

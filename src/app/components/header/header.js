@@ -49,12 +49,17 @@ export default function Header() {
 
     const phoneNumber = "+56632280955"; // Número de teléfono a copiar
 
+    if (!navigator.clipboard) {
+      alert("Tu navegador no soporta copiar al portapapeles automáticamente. Por favor, intenta manualmente.");
+      return;
+    }
+
     try {
       await navigator.clipboard.writeText(phoneNumber); // Copiar al portapapeles
       setCopied(true); // Mostrar el mensaje de copiado
       setTimeout(() => setCopied(false), 2000); // Ocultar el mensaje después de 2 segundos
     } catch (err) {
-      console.error("Error al copiar el número: ", err);
+      alert("No se pudo copiar el número. Por favor, intenta manualmente.");
     }
   };
 

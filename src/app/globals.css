@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden; /* Evita desbordamientos horizontales */
   width: 100%;
 }
 
@@ -15,6 +16,7 @@ body {
   font-family: 'Saira', Arial, Helvetica, sans-serif !important;
   width: 100%;
   background-color: #181818;
+  overflow-x: hidden; /* Evita desbordamientos horizontales */
 }
 
 a {
