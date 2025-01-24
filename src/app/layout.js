@@ -1,9 +1,12 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Entre Brasas - Restaurante Chileno",
+  title: 
+    "EntreBrasas Restaurant | Valdivia",
   description:
-    "Restaurante de comida chilena en Valdivia, Chile. Disfruta de nuestros platos y vinos en un ambiente único.",
+    "Disfruta de nuestros increíbles platos y mejores vinos en un ambiente único.",
+  keywords:
+    "restaurante en Valdivia, comida chilena, platos tradicionales, vinos chilenos, mejor restaurante, cocina local, gastronomía Valdivia, comida típica chilena, restaurante EntreBrasas"
 };
 
 export default function RootLayout({ children }) {
@@ -12,7 +15,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, user-scalable=no"
+          content="width=device-width, initial-scale=1.0"
         />
       </head>
       <body>{children}</body>

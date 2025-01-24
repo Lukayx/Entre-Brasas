@@ -85,7 +85,7 @@ export default function MainDishes() {
             </span>
             <span className={styles.spanCard}>
               Especialidades en carnes a las brasas, pescados y platos
-              vegetarianos.
+              vegetarianos. 
             </span>
             <span className={styles.spanCard}>
               Honramos la cocina chilena con recetas tradicionales.
