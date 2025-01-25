@@ -220,6 +220,7 @@ body > .sidebar {
     opacity: 1 !important;
     white-space: normal !important;
     pointer-events: all;
+    padding-inline: 5px;
   }
 
   .nav::before{

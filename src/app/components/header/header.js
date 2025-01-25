@@ -1,36 +1,18 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./header.module.css";
 import ExportedImage from "next-image-export-optimizer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy, faPhone } from "@fortawesome/free-solid-svg-icons";
-import portraitMobile from "../../../../public/header1.webp";
-import portraitPc from "../../../../public/headerTemporal.webp";
-// import portraitPc from "../../../../public/header2.webp";
 import title from "../../../../public/headerTitle.png";
 
-function useMediaQuery(query) {
-  const [matches, setMatches] = useState(false);
 
-  useEffect(() => {
-    const media = window.matchMedia(query);
-    if (media.matches !== matches) {
-      setMatches(media.matches);
-    }
-    const listener = () => setMatches(media.matches);
-    media.addListener(listener);
-    return () => media.removeListener(listener);
-  }, [matches, query]);
-
-  return matches;
-}
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [copied, setCopied] = useState(false); // Estado para el mensaje de "copiado"
   const [zIndex, setZIndex] = useState(-1); // Estado para el z-index del modal
-  const isMobile = useMediaQuery("(max-width: 500px)");
 
   const openModal = () => {
     setZIndex(3); // Establecer z-index alto al abrir
@@ -66,18 +48,16 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <ExportedImage
-        src={isMobile ? portraitMobile : portraitPc}
-        // width={isMobile ? 500 : 1892}
-        // height={isMobile ? 626 : 1064}
-        alt="Header image"
-        quality={100} // Calidad máxima
-        fill
-        sizes="100vw"
-        priority
-        className={styles.headerImage}
-        style={{ objectFit: "cover", height: "600px", maxWidth: "100%" }} 
-      />
+      <picture>
+        <source srcSet="/headerTemporal.webp" media="(min-width: 500px)" />
+        <source srcSet="/header1.webp" media="(max-width: 499px)" />
+        <img
+          src="/headerTemporal.webp"
+          alt="Header image"
+          className={styles.headerImage}
+          style={{ objectFit: "cover", height: "600px", width: "100%" }}
+        />
+      </picture>
       <div className={styles.headerContent}>
         <ExportedImage
           src={title}
