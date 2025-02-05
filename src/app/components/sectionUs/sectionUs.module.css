@@ -34,7 +34,7 @@
 .sectionUs .usImage{
   grid-area: img1;
   object-fit: cover; /* Ajusta las imágenes al espacio */
-  max-width: 100%;
+  width: 100%;
   height: 100%; /* Mantiene la proporción de la imagen */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5) ;
 }
