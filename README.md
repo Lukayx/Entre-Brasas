@@ -1,37 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Entre-Brasas 🍖🔥
 
-## Getting Started
+Página web de presentación para el restaurante valdiviano Entre Brasas.
 
-First, run the development server:
+## 🚀 Tecnologías utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Next.js – framework de React para SSR y SSG.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- CSS – estilos personalizados.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🎯 Objetivos del proyecto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Crear una página web funcional y atractiva para la presentación del restaurante.
 
-## Learn More
+- Implementar buenas prácticas de SEO para mejorar el posicionamiento en buscadores.
 
-To learn more about Next.js, take a look at the following resources:
+## 📚 Lo que aprendí
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Fundamentos y métricas de SEO para optimizar páginas web.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Estrategias de posicionamiento web y análisis de fortalezas/debilidades.
 
-## Deploy on Vercel
+- Ventajas y limitaciones de Next.js en comparación con otras tecnologías.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Mejora en el manejo de CSS y en la organización de estilos.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Entre-Brasas
+## 📸 Capturas de pantallas
+
+### 🏠 Banner principal
+   <img width="370" height="802" alt="Banner principal de la página de inicio" src="https://github.com/user-attachments/assets/a56cb5c7-df9b-4cbb-8346-2ea58eb2ec05" />
+
+### 👥 Quiénes somos
+  <img width="371" height="803" alt="Sección quienes somos con descripción del restaurante" src="https://github.com/user-attachments/assets/0a9c2bf5-b85d-4898-9931-32f57d478d10" />
+
+### 🍽️ Platos principales
+  <img width="370" height="803" alt="Sección de platos principales con categorías de comidas" src="https://github.com/user-attachments/assets/300699df-ad26-49a8-bd78-2b5908992317" />
+
+
+### 🍷 Carta de vinos
+  <img width="371" height="802" alt="Sección de carta de vinos con etiquetas y descripciones" src="https://github.com/user-attachments/assets/97ab1db3-f419-43bf-a40d-b99d6618af73" />
+
+### 📍 Cómo encontrarnos
+  <img width="372" height="801" alt="Sección de ubicación y contacto del restaurante" src="https://github.com/user-attachments/assets/566f4251-11aa-4b76-aedf-79563dc9c5b6" />
